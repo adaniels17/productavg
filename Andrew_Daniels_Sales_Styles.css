@@ -1,0 +1,66 @@
+/* External Style Sheet */
+.product-page {width: 100%; margin-top: 15%;} /* Page Setup */
+
+/* Form Setup */
+.form {width: 220px;
+    max-width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 35px;
+    padding-right: 104px;
+}
+
+/* Setup for each input field */
+input[name = "product 1"],
+input[name = "product 2"],
+input[name = "product 3"],
+input[name = "product 4"] {
+    background-color:rgb(228, 227, 227);
+    width: 250px;
+    height: 30px;
+    margin: 9px;
+    padding-left: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    border: none;
+    
+}
+
+/* Button Setup */
+button {
+    width: 272px;
+    height: 40px;
+    margin: 9px;
+    background-color: rgb(52,141,52);
+    text-transform: uppercase;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+/* Setup for each label above input fields */
+label {
+    position: relative;
+    color: rgb(168, 159, 109);
+    font-weight: bold;
+    padding-left: 55px;
+
+}
+
+/* Setup for the final output */
+.calculation {
+    position: relative;
+    width: 250px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* Background color */
+body {background-color: grey;}
