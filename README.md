@@ -1,2 +1,2 @@
 # productavg
-HTML averages
+HTML, CSS averages
