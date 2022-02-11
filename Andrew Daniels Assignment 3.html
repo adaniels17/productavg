@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <!--Link to External Style Sheet-->
+    <head>
+        <meta charset = "utf-8">
+        <title>Sales Person Earnings</title>
+        <link rel = "stylesheet" type = "text/css"
+            href = "Andrew_Daniels_Sales_Styles.css"> 
+    </head>
+
+
+
+
+
+    <body>
+        <!-- Div Class for CSS-->
+        <div class = "product-page"> 
+            <div class = "form">
+                    <!-- Each input and ID given for each product. Step = "1" makes it take decimals as integers-->
+                    <label>Product 1
+                        <input name = "product 1" id = "product_1" type = "number" step = "1" min = "0" required>
+                    </label>
+                    <label>Product 2
+                        <input name = "product 2" id = "product_2" type = "number" step = "1" min = "0" required>
+                    </label>
+                    <label>Product 3
+                        <input name = "product 3" id = "product_3" type = "number" step = "1" min = "0" required>
+                    </label>
+                    <label>Product 4
+                        <input name = "product 4" id = "product_4" type = "number" step = "1" min = "0" required>
+                    </label>
+                    
+                    <!-- Button calling earnings function on click-->
+                    <button onclick = "earnings()">Salesperson's Earnings</button>
+                    
+                    <!-- Place to display text -->
+                    <div class = "calculation"><p id="click_here"></p></div>
+            </div>
+        </div>
+
+        <script>
+            function earnings(){
+                var product1 = parseInt(document.getElementById("product_1").value); //Grabbing each element from html and assigning variable
+                var product2 = parseInt(document.getElementById("product_2").value);
+                var product3 = parseInt(document.getElementById("product_3").value);
+                var product4 = parseInt(document.getElementById("product_4").value);
+
+                if (product1 < 0 || product2 < 0 || product3 < 0 || product4 < 0){ 
+                    alert("Must be greater than or equal to zero"); // Alert to prevent negative inputs
+                return;
+                }
+
+
+
+                var sales = (product1 * 75) + (product2 * 100) + (product3 * 125) + (product4 * 200); // Equation adding each product
+                var comission = (sales * 0.0875);  // Comission equation
+                var total = 900 + comission; // Total amount
+
+                var salesround = sales.toFixed(2) // Rounding each variable to display in the text with 2 decimal places
+                var comissionround = comission.toFixed(2)
+                var totalround = total.toFixed(2)
+
+                var text = "Salesperson's total earnings is $" + totalround + " that includes $900 per week plus a comission of $" + comissionround + " (8.75% of total sale of $"+ salesround +")"; // Final Output Text
+                document.getElementById("click_here").innerHTML = text; // Grabbing element from html and changing its value to the final output
+            
+            } // End function
+            
+
+            
+        </script>
+
+
+
+
+    </body>
+
+</html>
